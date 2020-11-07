@@ -25,7 +25,8 @@ namespace Product.Microservice.Controllers
         {
             try
             {
-                return Ok();
+                var response = _productService.Items();
+                return Ok(response);
             }   
             catch(Exception ex)
             {
@@ -38,7 +39,8 @@ namespace Product.Microservice.Controllers
         {
             try
             {
-                return Ok();
+                var response = _productService.Item(id);
+                return Ok(response);
             }
             catch (Exception ex)
             {
@@ -51,7 +53,8 @@ namespace Product.Microservice.Controllers
         {
             try
             {
-                return Ok();
+                var response = _productService.Insert(model);
+                return Ok(response);
             }
             catch (Exception ex)
             {
@@ -64,7 +67,8 @@ namespace Product.Microservice.Controllers
         {
             try
             {
-                return Ok();
+                var response = _productService.Update(model);
+                return Ok(response);
             }
             catch (Exception ex)
             {
@@ -77,7 +81,8 @@ namespace Product.Microservice.Controllers
         {
             try
             {
-                return Ok();
+                var response = _productService.Delete(id);
+                return Ok(response);
             }
             catch (Exception ex)
             {

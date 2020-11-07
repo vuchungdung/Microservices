@@ -29,6 +29,7 @@ namespace Gateway.API
         {
             services.AddControllers();
             services.AddOcelot();
+            services.AddSwaggerForOcelot(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +52,7 @@ namespace Gateway.API
             });
 
             await app.UseOcelot();
+            app.UseSwaggerForOcelotUI(Configuration);
         }
     }
 }

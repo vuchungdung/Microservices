@@ -20,8 +20,8 @@ namespace Order.Microservice.Controllers
             _orderService = orderService;
         }
         [HttpGet]
-        [Route("items")]
-        public IActionResult Items()
+        [Route("get-all")]
+        public IActionResult GetAll()
         {
             try
             {
@@ -35,7 +35,7 @@ namespace Order.Microservice.Controllers
         }
         [HttpGet]
         [Route("item-{id}")]
-        public IActionResult Item([FromQuery] int id)
+        public IActionResult Item(int id)
         {
             try
             {
@@ -77,7 +77,7 @@ namespace Order.Microservice.Controllers
         }
         [HttpDelete]
         [Route("delete-{id}")]
-        public IActionResult Items([FromQuery] int id)
+        public IActionResult Items(int id)
         {
             try
             {
