@@ -9,9 +9,5 @@
     <ProjectReference Include="..\..\Common\Common.Model\Common.Model.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-
 
 </Project>

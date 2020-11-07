@@ -4,7 +4,10 @@ using System.Text;
 
 namespace Common.Model.ViewModel
 {
-    class OrderViewModel
+    public class OrderViewModel
     {
+        public int Id { get; set; }
+        public string Customer { get; set; }
+        public DateTime CreateDate { get; set; }
     }
 }

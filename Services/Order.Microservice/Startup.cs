@@ -12,6 +12,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Order.Microservice.Services;
+using Order.Microservice.Services.Interfaces;
 
 namespace Order.Microservice
 {
@@ -29,6 +31,7 @@ namespace Order.Microservice
         {
             services.AddControllers();
             services.AddScoped<IDatabaseHelper, DatabaseHelper>();
+            services.AddScoped<IOrderService, OrderService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
