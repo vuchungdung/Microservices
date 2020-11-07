@@ -34,7 +34,7 @@ namespace Order.Microservice.Controllers
             }
         }
         [HttpGet]
-        [Route("item")]
+        [Route("item-{id}")]
         public IActionResult Item([FromQuery] int id)
         {
             try
